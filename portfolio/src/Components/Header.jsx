@@ -85,6 +85,15 @@ export default function Header() {
               >
                 <a href="#about">About</a>
               </li>
+
+              <li
+                className={` text-white text-2xl text-center w-full  ${
+                  show ? "mt-8" : ""
+                }  z-10 hover:text-[#53bf63] `}
+              >
+                <a href="#skills">Skills</a>
+              </li>
+
               <li
                 className={` text-white text-2xl text-center w-full  ${
                   show ? "mt-8" : ""
@@ -102,11 +111,11 @@ export default function Header() {
         ></div>
         <div>
           <h1
-            className=" text-3xl text-center text-white  mt-[11rem]"
+            className=" text-3xl text-center text-white  mt-[9rem]"
             data-aos="fade-up"
             data-aos-duration="3000"
           >
-            Hey!! I am Avinash Yadav
+            Hi !! <br />I am Avinash Yadav
           </h1>
           <h1
             className=" md:text-6xl text-4xl font-serif text-[#53bf63] font-extrabold text-center mt-12 "
@@ -120,12 +129,12 @@ export default function Header() {
             data-aos="fade-up"
             data-aos-duration="3000"
           >
-            I&apos;m a versatile full stack web developer and apprentice in ML
+            I&apos;m a passionate full stack web developer and apprentice in ML
             with a keen attention to details and a knack for problem-solving.
-            Currently pursuing a Bachelor&apos;s in Computer Science, adept at
-            collaborating and communicating new ideas effectively. Possesses
-            excellent verbal communication skills, enabling seamless interaction
-            within teams and clients alike.
+            While I may be relatively new to the field, my enthusiasm for
+            coding, continuous learning, adept at collaborating and
+            communicating new ideas effectively drives me to excel in every
+            project I undertake.
           </p>
         </div>
         <div
