@@ -1,80 +1,77 @@
 const projectarr = [
   {
-    name: "ShopVista",
-    disc: "This is an e-commerce website made using React.js bootstrap MUI",
-    code: "https://github.com/AMISH-KHAN/ShopVista-Frontend",
-    image: "./assets/image/shopvista.png",
+    name: "FlaskBlog",
+    disc: "FlaskBlog is a comprehensive blog application developed using Flask, a micro web framework in Python.",
+    code: "https://github.com/avinashyadav16/FlaskBlog",
+    image: "../../Images/FlaskBlog.png",
   },
   {
-    name: "Tic-Tac-Toe",
-    disc: "This is a multiplayer tic-tac-toe game it uses socket.io HTML CSS Javascript",
-    code: "https://github.com/AMISH-KHAN/Tic-Tac_toe-app",
-    live: "https://tic-tac-toe-8a0g.onrender.com/",
-    image: "./assets/image/tic-tac-toe.png",
+    name: "ZipperPlace",
+    disc: "A file compressing (and decompressing) web application designed using the concept of Huffman Coding.",
+    code: "https://github.com/avinashyadav16/ZipperPlace",
+    live: "",
+    image: "../../Images/ZipperPlace.png",
   },
   {
     name: "Portfolio",
-    disc: "Portfolio made using react and TailwindCss",
-    code: "https://github.com/AMISH-KHAN/MordernPortfolio",
-    live: "https://amishkhan.netlify.app/",
-    image: "./assets/image/MordernPortfolio.png",
+    disc: "Portfolio made using ReactJS and TailwindCSS",
+    code: "https://github.com/avinashyadav16/profile",
+    live: "",
+    image: "../../Images/Portfolio.png",
   },
 ];
 
-export default function Projoects() {
+export default function Projects() {
   return (
     <>
-      <section id="projects">
+      <section id="projects" className="w-full mb-48">
         <h1 className="h-[7rem] bg-black text-white text-3xl flex items-center justify-center">
-          Projects{" "}
+          Projects
         </h1>
         <div>
           <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-            <div className="flex md:flex-row flex-col justify-between gap-10">
-              {projectarr.map((project, index) => {
-                return (
-                  <div
-                    className="rounded overflow-hidden shadow-lg shadow-[#53bf63] "
-                    data-aos="zoom-in"
-                    data-aos-duration="1500"
-                  >
-                    <div className="relative">
-                      <img
-                        className="w-full h-[13rem]"
-                        src={`${project.image}`}
-                        alt={`Image of ${project.image}`}
-                      />
-                      <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
-
-                      {/* <div className='flex justify-between'> */}
-
-                      {project.live ? (
-                        <a href={`${project.live}`} target="_blank">
-                          <div className="absolute bottom-0 left-0 bg-[#000000ae]  px-4 py-2 text-white text-sm hover:bg-[#000000ce] hover:text-[#53bf63]  transition duration-500 ease-in-out">
-                            Live
-                          </div>
-                        </a>
-                      ) : (
-                        ""
-                      )}
-
-                      <a href={`${project.code}`} target="_blank">
-                        <div className="absolute bottom-0 right-0  bg-[#000000ae] px-4 py-2 text-white text-sm hover:bg-[#000000ce] hover:text-[#53bf63] transition duration-500 ease-in-out">
-                          Code
-                        </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {projectarr.map((project, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg overflow-hidden shadow-lg shadow-[#53bf63] hover:shadow-xl"
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <div className="relative">
+                    <img
+                      className="w-full h-48 object-cover"
+                      src={project.image}
+                      alt={`Image of ${project.name}`}
+                    />
+                    <div className="absolute inset-0 bg-gray-900 opacity-25"></div>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute bottom-0 left-0 bg-[#000000ae] px-4 py-2 text-white text-sm hover:bg-[#000000ce] hover:text-[#53bf63] transition duration-500 ease-in-out"
+                      >
+                        Live
                       </a>
-                      {/* </div> */}
-                    </div>
-                    <div className="px-6 py-4">
-                      <h1 className="font-semibold text-lg text-white inline-blocktransition duration-500 ease-in-out">
-                        {project.name}
-                      </h1>
-                      <p className="text-white text-sm mt-4">{project.disc}</p>
-                    </div>
-                    <div className="px-6 py-4 flex flex-row items-center"></div>
+                    )}
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-0 right-0 bg-[#000000ae] px-4 py-2 text-white text-sm hover:bg-[#000000ce] hover:text-[#53bf63] transition duration-500 ease-in-out"
+                    >
+                      Code
+                    </a>
                   </div>
-                );
-              })}
+                  <div className="px-6 py-4">
+                    <h1 className="font-semibold text-lg text-white mb-2">
+                      {project.name}
+                    </h1>
+                    <p className="text-white text-sm">{project.disc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

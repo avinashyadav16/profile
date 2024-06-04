@@ -50,16 +50,16 @@ export default function Header() {
             show ? " bg-[#0000007d] h-fit   md:h-16 " : " "
           } ${
             scrolled || show
-              ? "bg-[#000000cb] backdrop-blur-lg  "
+              ? "bg-[#000000cb] backdrop-blur-3xl  "
               : "bg-transparent  "
           }`}
         >
           <div className="flex flex-col md:flex-row justify-between px-3  md:px-40 pt-3">
             <div className=" w-fit ml-8 ">
               <img
-                src="./assets/image/Logo.png"
+                src="../../Images/logo.png"
                 className=" h-10 md:h-14"
-                alt=""
+                alt="LogoImage"
               />
             </div>
             <GiHamburgerMenu
@@ -137,31 +137,37 @@ export default function Header() {
             project I undertake.
           </p>
         </div>
+
         <div
-          className="flex justify-center mt-12 gap-8 z-40"
+          className="flex flex-col items-center mt-12 gap-6 z-40"
           data-aos="fade-up"
           data-aos-duration="3000"
         >
-          <a href="https://github.com/avinashyadav16" target="_blank">
-            <FaGithub className=" text-white text-5xl" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/avinash-yadav-16hgnisgar"
-            target="_blank"
-          >
-            <FaLinkedin className=" text-white text-5xl" />
-          </a>
-        </div>
-        <a
-          href="https://drive.google.com/drive/folders/176CeqvN_RnKeTx9DOfkGamPovUi39muC?usp=sharing"
-          target="_blank"
-          data-aos="fade-up"
-          data-aos-duration="3000"
-        >
-          <div className=" w-fit m-auto px-8 py-2 text-white  my-12 border border-[#53bf63] hover:bg-[#53bf63] rounded-3xl cursor-pointer flex gap-2  items-center">
-            <FaDownload /> <span>Resume</span>
+          <div className="flex gap-12">
+            <a
+              href="https://www.linkedin.com/in/avinash-yadav-16hgnisgar"
+              target="_blank"
+            >
+              <FaLinkedin className="text-white text-5xl" />
+            </a>
+
+            <a href="https://github.com/avinashyadav16" target="_blank">
+              <FaGithub className="text-white text-5xl" />
+            </a>
           </div>
-        </a>
+
+          <div>
+            <a
+              href="https://drive.google.com/drive/folders/176CeqvN_RnKeTx9DOfkGamPovUi39muC?usp=sharing"
+              target="_blank"
+            >
+              <div className="w-fit m-auto px-8 py-2 text-white mt-4 mb-12 border border-[#53bf63] hover:bg-[#53bf63] rounded-3xl cursor-pointer flex gap-2 items-center">
+                <FaDownload /> <span>Resume</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
         <div className="absolute bottom-[-10rem] left-[-4rem] w-1/2 h-[20rem]   z-0 border rounded-[100%] bg-[#42954f] blur-[5rem]"></div>
       </header>
     </>

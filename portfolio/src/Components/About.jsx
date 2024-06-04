@@ -5,16 +5,16 @@ export default function About() {
         <div className="h-[7rem] bg-black text-white text-3xl flex items-center justify-center">
           About
         </div>
-        <div className="py-52 px-0 md:px-52 flex justify-center align-middle ">
-          <div className="flex gap-20 justify-center align-middle lg:flex-row md:flex-col flex-col w-[80rem] ">
-            <div className="relative top-[1rem]">
+        <div className="py-20 px-0 md:px-20 flex justify-center align-middle">
+          <div className="flex gap-10 justify-center align-middle lg:flex-row md:flex-col flex-col w-full">
+            <div className="relative">
               <div
                 className=" w-56 md:w-[25rem] mx-auto  mb-12 "
                 data-aos="zoom-in"
                 data-aos-duration="1500"
               >
                 <img
-                  src="../../public/Images/profileImage.jpg"
+                  src="../../Images/profileImage.jpg"
                   className="rounded-xl h-[20rem]  md:h-[30rem] object-cover ml-12"
                   width={"80%"}
                   alt="profile-image"

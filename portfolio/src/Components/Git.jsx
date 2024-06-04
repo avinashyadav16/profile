@@ -1,10 +1,10 @@
 export default function Github() {
   return (
     <>
-      <section id="github">
-        <h1 className="h-[7rem]  text-white text-3xl flex items-center justify-center">
-          GitHub Stats{" "}
-        </h1>
+      <section id="github" className="w-full mb-24">
+        <div className="h-[7rem] bg-black text-white text-3xl flex items-center justify-center  mb-12">
+          GitHub Stats
+        </div>
         <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
           <div className="flex md:flex-row flex-col justify-between gap-10">
             <img
